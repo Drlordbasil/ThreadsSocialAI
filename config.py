@@ -1,3 +1,6 @@
+
+#config.py
+
 class Config:
     """
     Configuration class for the influencer bot.
