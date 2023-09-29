@@ -1,4 +1,4 @@
-# in a new file, let's call it content_generator.py
+# content_generator.py
 
 from gpt4all_setup import setup_gpt4all
 
