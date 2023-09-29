@@ -15,7 +15,8 @@ def main():
     driver = setup_chrome_driver()
     login(driver, Config.THREADS_NET_USERNAME, Config.THREADS_NET_PASSWORD)
 
-    
+    logger.info('Bot started')
+
     # Post new content
     title, content = generate_post_title_and_content()
     post_content(driver, title, content)
@@ -25,7 +26,8 @@ def main():
     for comment_id, comment_text in comments:
         reply_text = generate_reply(comment_text)
         reply_to_comment(driver, 'post_url_here', comment_id, reply_text)
-    
+    logger.info('Bot finished')
+
 
 if __name__ == "__main__":
     main()
