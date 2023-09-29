@@ -1,7 +1,7 @@
 # Update bot.py
 
 from content_generator import generate_post_title_and_content, generate_reply
-from threads_interactions import post_content, reply_to_comment
+from threads_interactions import post_content, reply_to_comment, login  
 from config import Config
 from logger_setup import setup_logger
 from chrome_setup import setup_chrome_driver 
