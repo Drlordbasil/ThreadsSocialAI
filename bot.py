@@ -3,6 +3,11 @@
 from content_generator import generate_post_title_and_content, generate_reply
 from threads_interactions import post_content, reply_to_comment
 from config import Config
+from logger_setup import setup_logger
+
+logger = setup_logger('InfluencerBot')
+
+
 def main():
     """
     Main function to orchestrate the influencer bot activities.
