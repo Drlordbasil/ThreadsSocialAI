@@ -2,13 +2,14 @@
 
 from content_generator import generate_post_title_and_content, generate_reply
 from threads_interactions import post_content, reply_to_comment
-
+from config import Config
 def main():
     """
     Main function to orchestrate the influencer bot activities.
     """
     driver = setup_chrome_driver()
-    login(driver, 'your_username', 'your_password')
+    login(driver, Config.THREADS_NET_USERNAME, Config.THREADS_NET_PASSWORD)
+
     
     # Post new content
     title, content = generate_post_title_and_content()
@@ -20,7 +21,6 @@ def main():
         reply_text = generate_reply(comment_text)
         reply_to_comment(driver, 'post_url_here', comment_id, reply_text)
     
-    # Additional logic for social media influencing on Threads.net
 
 if __name__ == "__main__":
     main()
